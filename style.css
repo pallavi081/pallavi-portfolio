@@ -1,4 +1,6 @@
-/* ================= GENERAL STYLES ================= */
+/* ==========================
+   GLOBAL RESET & DARK THEME
+   ========================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,172 +9,180 @@
 }
 
 body {
-    background-color: #f9fafc;
-    color: #333;
+    background: #0f172a;
+    color: #e5e7eb;
     line-height: 1.6;
 }
 
-/* ================= NAVBAR ================= */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: #3498db;
-}
-
-/* ================= HERO ================= */
-.hero {
+/* ==========================
+   HEADER
+   ========================== */
+header {
+    background: linear-gradient(135deg, #020617, #020617);
+    padding: 40px 20px;
     text-align: center;
-    padding: 60px 20px;
+    animation: fadeDown 1s ease;
 }
 
-.hero h2 {
-    font-size: 32px;
-    color: #2c3e50;
+header h1 {
+    font-size: 2.8rem;
+    color: #38bdf8;
 }
 
-.hero p {
-    font-size: 18px;
-    color: #666;
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #cbd5f5;
 }
 
-/* ================= SECTION ================= */
-.section {
-    padding: 60px 10%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 28px;
-    color: #2c3e50;
-}
-
-/* ================= ABOUT ================= */
-.about-text {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    color: #555;
-}
-
-/* ================= SKILLS ================= */
-.skills-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.skill-card {
-    background: #ffffff;
-    padding: 25px;
-    width: 320px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.skill-card h3 {
-    margin-bottom: 15px;
-    color: #3498db;
-}
-
-.skill-card ul {
-    list-style: none;
-}
-
-.skill-card li {
-    margin-bottom: 8px;
-}
-
-/* ================= EXPERIENCE ================= */
-.experience-card {
-    max-width: 800px;
-    margin: auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* ================= CONTACT ================= */
-.contact-card {
-    max-width: 600px;
-    margin: auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* ==========================
+   NAVBAR
+   ========================== */
+nav {
     margin-top: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+nav a {
+    text-decoration: none;
+    color: #e5e7eb;
+    margin: 0 15px;
+    font-weight: 500;
+    position: relative;
 }
 
-.contact-form button {
-    padding: 10px;
-    background-color: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #2980b9;
+nav a:hover::after {
+    width: 100%;
 }
 
-/* ================= FOOTER ================= */
+/* ==========================
+   SECTIONS
+   ========================== */
+section {
+    padding: 70px 12%;
+    animation: fadeUp 1s ease;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #38bdf8;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #38bdf8;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+/* ==========================
+   CARDS
+   ========================== */
+.card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* ==========================
+   SKILLS
+   ========================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skills-grid div {
+    background: #020617;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skills-grid div:hover {
+    background: #020617;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+/* ==========================
+   CONTACT
+   ========================== */
+.contact a {
+    display: inline-block;
+    margin: 10px 15px 0 0;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
 footer {
+    background: #020617;
     text-align: center;
     padding: 20px;
-    background: #ffffff;
     margin-top: 40px;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    color: #94a3b8;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ==========================
+   ANIMATIONS
+   ========================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
+    section {
+        padding: 50px 7%;
     }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
+    header h1 {
+        font-size: 2.2rem;
     }
 }
