@@ -225,3 +225,18 @@ section {
 footer {
   text-align: center;
 }
+/* ================= SECTION DIVIDERS ================= */
+
+section h2 {
+  margin-bottom: 15px;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #38bdf8;
+  margin: 10px auto 30px;
+  border-radius: 5px;
+}
