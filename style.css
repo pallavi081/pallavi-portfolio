@@ -11,10 +11,21 @@ body {
 }
 
 .hero {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 80px 10%;
+  background: #050b1c;
+  padding: 40px 10%;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .profile-pic {
