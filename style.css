@@ -66,3 +66,46 @@ body {
   left: 0;
   z-index: -1;
 }
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+  }
+
+  .profile-pic {
+    width: 160px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+}
