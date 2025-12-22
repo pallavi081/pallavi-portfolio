@@ -326,3 +326,11 @@ section h2::after {
     margin-top: 30px;
   }
 }
+/* Profile image styling */
+.hero-right .profile-pic {
+  width: 220px;       /* You can adjust size */
+  height: auto;
+  border-radius: 50%; /* Optional: makes it circular */
+  display: block;
+  object-fit: cover;  /* Ensures image scales nicely */
+}
