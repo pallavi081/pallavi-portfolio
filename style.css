@@ -184,3 +184,68 @@ footer {
   text-align: center;
   padding: 20px;
 }
+/* ================= FORCE CENTER ALIGNMENT ================= */
+
+/* Center all sections */
+section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HERO FIX */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center hero text */
+.hero-text {
+  text-align: center;
+}
+
+/* Center hero image */
+.hero-img {
+  margin-top: 30px;
+}
+
+/* ABOUT text width */
+#about p {
+  max-width: 700px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* EXPERIENCE */
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+}
+
+/* PROJECTS */
+.project-card {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* CONTACT */
+#contact {
+  align-items: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+}
