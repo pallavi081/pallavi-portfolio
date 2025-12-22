@@ -1,121 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pallavi Kumari | Portfolio</title>
-<img src="images/profile.jpg" alt="Pallavi Kumari" class="profile-pic">
+  <meta charset="UTF-8" />
+  <title>Pallavi Kumari | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Pallavi Kumari</h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<canvas id="particles"></canvas>
 
-        <section class="hero" id="home">
-              <img src="profile.jpg" alt="Pallavi Kumari" class="profile-pic">
-            <h2>Computer Science Engineering Student</h2>
-            <p>Web Development Enthusiast</p>
-        </section>
-    </header>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <h1 class="logo">Pallavi Kumari</h1>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- ================= ABOUT SECTION ================= -->
-    <section class="section" id="about">
-        <h2 class="section-title">About Me</h2>
-        <p class="about-text">
-            I am a Computer Science Engineering student with a strong interest in web development and programming.
-            I enjoy learning new technologies and applying my knowledge through practical projects and internships.
-            I am motivated, detail-oriented, and continuously working to improve my technical and problem-solving skills
-            to build a successful career in the IT industry.
-        </p>
-    </section>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-text">
+    <h2>Pallavi Kumari</h2>
+    <h3>Computer Science Engineering Student</h3>
+    <p>Web Development Enthusiast</p>
 
-    <!-- ================= SKILLS SECTION ================= -->
-    <section class="section" id="skills">
-        <h2 class="section-title">Skills</h2>
+    <div class="buttons">
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="resume.pdf" class="btn-outline" download>Download Resume</a>
+    </div>
+  </div>
 
-        <div class="skills-container">
-            <!-- Technical Skills -->
-            <div class="skill-card">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Basic JavaScript</li>
-                    <li>Database Management (MySQL – Basics)</li>
-                    <li>Object-Oriented Programming (OOP)</li>
-                    <li>Data Structures & Algorithms (Basics)</li>
-                    <li>Web Development</li>
-                </ul>
-            </div>
+  <div class="hero-img">
+    <img src="images/profile.jpg" class="profile-pic" alt="Pallavi Kumari">
+  </div>
+</section>
 
-            <!-- Soft Skills -->
-            <div class="skill-card">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Problem Solving</li>
-                    <li>Teamwork & Collaboration</li>
-                    <li>Time Management</li>
-                    <li>Communication Skills</li>
-                    <li>Adaptability & Willingness to Learn</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Computer Science Engineering student with a strong interest in
+    web development and programming. I enjoy learning new technologies and
+    applying my knowledge through practical projects and internships.
+  </p>
+</section>
 
-    <!-- ================= EXPERIENCE SECTION ================= -->
-    <section class="section" id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-card">
-            <h3>Internship Experience</h3>
-            <p>
-                Worked as an intern where I gained hands-on experience in web development and programming concepts.
-                Learned to work on real-world tasks, improve coding practices, and understand professional workflows.
-                This experience strengthened my technical foundation and boosted my confidence in applying theoretical knowledge.
-            </p>
-        </div>
-    </section>
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div>Python</div>
+    <div>Java</div>
+    <div>HTML & CSS</div>
+    <div>JavaScript (Basics)</div>
+    <div>MySQL (Basics)</div>
+    <div>OOP & DSA (Basics)</div>
+  </div>
+</section>
 
-    <!-- ================= CONTACT SECTION ================= -->
-    <section class="section" id="contact">
-        <h2 class="section-title">Contact</h2>
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="experience-card">
+    <img src="images/experience.png">
+    <div>
+      <h3>Web Development Intern</h3>
+      <p>
+        Gained hands-on experience in web development, worked on real-world
+        tasks, improved coding practices, and collaborated in a professional
+        environment.
+      </p>
+    </div>
+  </div>
+</section>
 
-        <div class="contact-card">
-            <p><strong>Email:</strong> shripallavi3108@gmail.com</p>
-            <p><strong>LinkedIn:</strong>       h ps://github.com/pallavi081</p>
-            <p><strong>GitHub:</strong>       h ps://github.com/pallavi081</p>
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <h2>Projects</h2>
 
-            <!-- Simple Non-functional Form -->
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+  <div class="project-card">
+    <h3>Snake Race Game 🎮</h3>
+    <p>JavaScript-based browser game.</p>
+    <a href="https://pallavi081.github.io/snake_race/" target="_blank">Live Demo</a>
+  </div>
+</section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <p>© 2025 Pallavi Kumari. All Rights Reserved.</p>
-    </footer>
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: shripallavi@gmail.com</p>
+  <p>
+    <a href="https://github.com/pallavi081" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/pallavi-kumari-03b1112b0" target="_blank">LinkedIn</a>
+  </p>
+</section>
 
+<footer>© 2025 Pallavi Kumari</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
