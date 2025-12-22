@@ -30,3 +30,18 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+/* ================= TYPING EFFECT ================= */
+
+const text = "Pallavi Kumari";
+let index = 0;
+const speed = 150;
+
+function typeEffect() {
+  if (index < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, speed);
+  }
+}
+
+typeEffect();
