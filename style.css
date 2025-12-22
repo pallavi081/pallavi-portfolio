@@ -130,3 +130,57 @@ body {
   transform: scale(1.03);
   box-shadow: 0 0 20px rgba(56,189,248,0.6);
 }
+/* ================= CENTER ALL SECTIONS ================= */
+
+section {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+/* Center hero content */
+.hero {
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Center About text */
+#about p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Center skills grid */
+.skills-grid {
+  justify-items: center;
+}
+
+/* Center skill boxes */
+.skills-grid div {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Center experience section */
+.experience-card {
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Center projects */
+.project-card {
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Center contact section */
+#contact p {
+  text-align: center;
+}
+
+/* Center footer */
+footer {
+  text-align: center;
+  padding: 20px;
+}
