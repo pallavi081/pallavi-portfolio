@@ -277,3 +277,52 @@ section h2::after {
   margin: 10px auto 30px;
   border-radius: 5px;
 }
+/* ================= HERO LEFT–RIGHT FIX (FINAL OVERRIDE) ================= */
+
+/* Force hero to be row (left text + right image) */
+.hero {
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  text-align: left !important;
+}
+
+/* Hero content stays row */
+.hero-content {
+  flex-direction: row !important;
+}
+
+/* Left side text */
+.hero-text {
+  flex: 1;
+  text-align: left !important;
+}
+
+/* Right side image */
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Profile image stays right */
+.profile-pic {
+  width: 220px;
+  margin: 0;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .hero-text {
+    text-align: center !important;
+  }
+
+  .hero-img {
+    margin-top: 30px;
+  }
+}
