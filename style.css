@@ -109,3 +109,24 @@ body {
     padding: 40px 5%;
   }
 }
+/* ================= HOVER EFFECTS ================= */
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+.btn-outline:hover {
+  background: #38bdf8;
+  color: #000;
+}
+
+.skills-grid div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
