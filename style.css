@@ -60,3 +60,9 @@ body {
   gap: 20px;
   align-items: center;
 }
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
