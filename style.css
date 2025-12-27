@@ -334,3 +334,14 @@ section h2::after {
   display: block;
   object-fit: cover;  /* Ensures image scales nicely */
 }
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
