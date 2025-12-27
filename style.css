@@ -537,26 +537,3 @@ section h2::after {
   border-radius: 50%;
   object-fit: cover;
 }
-
-/* ================= SKILLS ================= */
-
-.skills-section {
-  padding: 80px 10%;
-  text-align: center;
-}
-
-.skills-box {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.skills-box span {
-  padding: 10px 20px;
-  border-radius: 25px;
-  background: rgba(56,189,248,0.15);
-  color: #38bdf8;
-  font-weight: 600;
-}
