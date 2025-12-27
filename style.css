@@ -590,3 +590,62 @@ section h2::after {
     justify-content: center;
   }
 }
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+  padding: 80px 80px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 191, 255, 0.2);
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.3);
+}
+
+.experience-card h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.company {
+  color: #00bfff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.duration {
+  font-size: 13px;
+  color: #aaa;
+  margin: 6px 0 12px;
+}
+
+.exp-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience {
+    padding: 60px 30px;
+  }
+}
