@@ -391,3 +391,81 @@ section h2::after {
   text-decoration: none;
   font-weight: 600;
 }
+/* ===== MY LIVE WEBSITES ===== */
+
+#live-websites {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.websites-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.website-card {
+  min-width: 320px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(56,189,248,0.25);
+  transition: transform 0.3s ease;
+}
+
+.website-card:hover {
+  transform: translateY(-8px);
+}
+
+.website-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.website-card h3 {
+  margin: 10px 0 5px;
+}
+
+.website-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+.tags span {
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  background: rgba(56,189,248,0.15);
+  color: #38bdf8;
+}
+
+.visit-btn {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 25px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.visit-btn:hover {
+  background: #38bdf8;
+  color: #000;
+}
