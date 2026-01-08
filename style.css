@@ -466,3 +466,139 @@ section h2::after {
   to { opacity: 1; }
 }
 
+/* ================= HERO SECTION (CLEAN & PROFESSIONAL) ================= */
+
+.hero {
+  width: 100%;
+  min-height: 70vh;            /* not full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+}
+
+.hero-left {
+  flex: 1;
+  text-align: left;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #f9fafb;
+}
+
+.hero-line {
+  font-size: 1.1rem;
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.hero-desc {
+  max-width: 520px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 25px;
+}
+
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.hero-points li {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  padding: 12px 26px;
+  border-radius: 30px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
+
+.btn-outline {
+  border: 2px solid #38bdf8;
+  padding: 12px 26px;
+  border-radius: 30px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #38bdf8;
+  color: #000;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero-right img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 35px rgba(56,189,248,0.7);
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-left {
+    text-align: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+}
+
