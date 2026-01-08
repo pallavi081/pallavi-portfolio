@@ -556,22 +556,6 @@ section h2::after {
   color: #000;
 }
 
-/* RIGHT IMAGE */
-.hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  animation: fadeIn 1.2s ease forwards;
-}
-
-.hero-right img {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #38bdf8;
-  box-shadow: 0 0 35px rgba(56,189,248,0.7);
-}
 
 /* ================= MOBILE RESPONSIVE ================= */
 
