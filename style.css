@@ -601,4 +601,55 @@ section h2::after {
     margin-top: 40px;
   }
 }
+/* ================= FIX HERO LAYOUT ================= */
+
+.hero {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 75vh;
+  padding: 80px 10%;
+  gap: 60px;
+}
+
+/* LEFT CONTENT */
+.hero-left {
+  width: 55%;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-right img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.7);
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-right {
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
 
