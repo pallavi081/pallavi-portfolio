@@ -539,6 +539,81 @@ section h2::after {
     margin-top: 40px;
   }
 }
+/* ================= HERO SAFE RESET ================= */
+
+/* stop global section flex from breaking hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  padding: 0 8%;
+}
+
+/* hero layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 60px;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* keep text compact */
+.hero-text p,
+.hero-text ul {
+  max-width: 520px;
+}
+
+/* RIGHT IMAGE – KEEP CIRCLE */
+.hero-right,
+.hero-img {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+/* RESTORE YOUR CIRCULAR IMAGE */
+.hero-right img,
+.hero-img img,
+.profile-pic {
+  width: 260px;
+  height: 260px;
+  border-radius: 50% !important;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 35px rgba(56,189,248,0.7);
+  transition: transform 0.4s ease;
+}
+
+/* subtle hover (professional) */
+.hero-right img:hover,
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+}
 
 
 
