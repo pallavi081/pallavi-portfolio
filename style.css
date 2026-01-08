@@ -649,3 +649,97 @@ section h2::after {
     padding: 60px 30px;
   }
 }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 60px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-name {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-line {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.hero-desc {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  max-width: 600px;
+}
+
+.hero-points {
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.hero-points li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #e5e7eb;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: #38bdf8;
+  color: #020617;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  border: 2px solid #38bdf8;
+  padding: 12px 26px;
+  border-radius: 30px;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #38bdf8;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
+}
