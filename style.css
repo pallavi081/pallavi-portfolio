@@ -743,3 +743,38 @@ section h2::after {
   border: 5px solid #38bdf8;
   box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
 }
+.hero {
+  min-height: 75vh;           /* NOT full screen */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 50px;
+}
+.hero-name {
+  font-size: 2.6rem;          /* reduced from very big */
+}
+
+.hero-line {
+  font-size: 1.1rem;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 560px;
+}
+.hero-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 14px;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 10px 22px;
+  font-size: 0.95rem;
+}
+.hero {
+  margin-bottom: 40px;
+}
