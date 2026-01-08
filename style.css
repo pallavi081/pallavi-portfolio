@@ -1,4 +1,7 @@
 body {
+  background: red !important;
+}
+body {
   background: #020617;
   color: #e5e7eb;
   font-family: 'Poppins', sans-serif;
