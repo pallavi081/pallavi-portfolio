@@ -716,5 +716,17 @@ a.btn:hover {
   line-height: 1.7;
   opacity: 0.85;
 }
+.hero-right img {
+  width: 280px;
+  border-radius: 16px;
+  object-fit: cover;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
 
 
