@@ -730,43 +730,46 @@ a.btn:hover {
   50% { transform: translateY(-12px); }
 }
 
+
 /* ===== PREMIUM CUSTOM CURSOR ===== */
 
+/* Hide default cursor */
 body {
   cursor: none;
 }
 
-/* Main cursor dot */
+/* Small center dot */
 .cursor-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: #38bdf8;
   border-radius: 50%;
   position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
-  z-index: 9999;
   transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
-/* Cursor ring */
+/* Outer ring */
 .cursor-ring {
   width: 36px;
   height: 36px;
-  border: 2px solid rgba(56, 189, 248, 0.5);
+  border: 2px solid rgba(56, 189, 248, 0.6);
   border-radius: 50%;
   position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
-  z-index: 9998;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+  z-index: 9998;
+  transition: width 0.2s ease, height 0.2s ease, border 0.2s ease;
 }
 
 /* Hover effect */
-.cursor-hover .cursor-ring {
-  transform: translate(-50%, -50%) scale(1.6);
-  opacity: 0.6;
-}
-
-* {
-  cursor: none !important;
+body.cursor-hover .cursor-ring {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #38bdf8;
 }
