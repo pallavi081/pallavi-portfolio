@@ -77,3 +77,43 @@ function typeEffect() {
 }
 
 typeEffect();
+/* ================= HERO TYPING EFFECT ================= */
+
+const roles = [
+  "CSE Student",
+  "Frontend Developer",
+  "Learning Backend",
+  "Exploring AI"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+const heroLine = document.querySelector(".hero-line");
+
+function typeEffect() {
+  if (!heroLine) return;
+
+  if (charIndex < roles[roleIndex].length) {
+    heroLine.textContent += roles[roleIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 80);
+  } else {
+    setTimeout(eraseEffect, 1500);
+  }
+}
+
+function eraseEffect() {
+  if (charIndex > 0) {
+    heroLine.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseEffect, 50);
+  } else {
+    roleIndex = (roleIndex + 1) % roles.length;
+    setTimeout(typeEffect, 300);
+  }
+}
+
+setTimeout(() => {
+  heroLine.textContent = "";
+  typeEffect();
+}, 1000);
