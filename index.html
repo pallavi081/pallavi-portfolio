@@ -13,6 +13,38 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="scroll-animations.js"></script>
 
+  <script>
+  const dot = document.createElement("div");
+  const ring = document.createElement("div");
+
+  dot.classList.add("cursor-dot");
+  ring.classList.add("cursor-ring");
+
+  document.body.appendChild(dot);
+  document.body.appendChild(ring);
+
+  document.addEventListener("mousemove", (e) => {
+    dot.style.left = e.clientX + "px";
+    dot.style.top = e.clientY + "px";
+
+    ring.animate({
+      left: e.clientX + "px",
+      top: e.clientY + "px"
+    }, { duration: 120, fill: "forwards" });
+  });
+
+  const hoverTargets = document.querySelectorAll("a, button");
+
+  hoverTargets.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      document.body.classList.add("cursor-hover");
+    });
+    el.addEventListener("mouseleave", () => {
+      document.body.classList.remove("cursor-hover");
+    });
+  });
+</script>
+
 
 <body>
 
