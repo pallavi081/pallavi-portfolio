@@ -28,10 +28,10 @@ window.addEventListener("load", () => {
   particlesJS("particles", {
     particles: {
       number: {
-        value: 900,          // 🔥 LOT of particles
+        value: 650,                // 🔥 ultra dense
         density: {
           enable: true,
-          value_area: 400    // 🔑 smaller = MORE visible particles
+          value_area: 420          // 🔑 smaller = denser
         }
       },
       color: {
@@ -45,15 +45,15 @@ window.addEventListener("load", () => {
         random: true
       },
       size: {
-        value: 1.2,
+        value: 1.1,
         random: true
       },
       line_linked: {
-        enable: false        // ❌ no lines
+        enable: false              // ❌ no lines (FPS win)
       },
       move: {
         enable: true,
-        speed: 0.3,          // slow premium motion
+        speed: 0.25,               // slow = premium
         random: true,
         out_mode: "out"
       }
