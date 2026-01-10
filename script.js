@@ -1,3 +1,4 @@
+alert("JS is working");
 /* ================= PARTICLES ================= */
 
 const canvas = document.getElementById("particles");
@@ -62,63 +63,25 @@ function animateParticles() {
 initParticles();
 animateParticles();
 
-/* ================= TYPING EFFECT ================= */
 
-const text = "Pallavi Kumari";
-let index = 0;
-const speed = 150;
+document.addEventListener("DOMContentLoaded", function () {
+  const heroLine = document.querySelector(".hero-line");
 
-function typeEffect() {
-  if (index < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, speed);
-  }
-}
-
-typeEffect();
-/* ================= HERO TYPING EFFECT (FIXED) ================= */
-
-const heroLine = document.querySelector(".hero-line");
-
-const roles = [
-  "CSE Student",
-  "Frontend Developer",
-  "Learning Backend",
-  "Exploring AI"
-];
-
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeEffect() {
-  if (!heroLine) return;
-
-  const currentText = roles[roleIndex];
-
-  if (!isDeleting) {
-    heroLine.textContent = currentText.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === currentText.length) {
-      setTimeout(() => (isDeleting = true), 1200);
-    }
-  } else {
-    heroLine.textContent = currentText.substring(0, charIndex - 1);
-    charIndex--;
-
-    if (charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-    }
+  if (!heroLine) {
+    alert("hero-line not found");
+    return;
   }
 
-  setTimeout(typeEffect, isDeleting ? 60 : 90);
-}
+  const text = "CSE | Frontend Developer | Learning Backend & AI";
+  let index = 0;
 
-/* CLEAR EXISTING TEXT FIRST */
-heroLine.textContent = "";
+  heroLine.textContent = "";
 
-/* START EFFECT */
-setTimeout(typeEffect, 800);
+  setInterval(() => {
+    if (index < text.length) {
+      heroLine.textContent += text.charAt(index);
+      index++;
+    }
+  }, 100);
+});
+
