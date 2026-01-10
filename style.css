@@ -697,5 +697,24 @@ a.btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0, 234, 255, 0.6);
 }
+.hero-left h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-line {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #00eaff;
+  font-weight: 500;
+}
+
+.hero-desc {
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
 
 
