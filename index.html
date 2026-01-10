@@ -28,10 +28,10 @@ window.addEventListener("load", () => {
   particlesJS("particles", {
     particles: {
       number: {
-        value: 950,                // 🔥 ultra dense
+        value: 900,                 // 🔥 VERY MANY particles
         density: {
           enable: true,
-          value_area: 360          // 🔑 smaller = denser
+          value_area: 350           // 🔑 tighter = denser
         }
       },
       color: {
@@ -41,20 +41,20 @@ window.addEventListener("load", () => {
         type: "circle"
       },
       opacity: {
-        value: 0.35,
-        random: true
+        value: 0.85,                // ✅ MUCH MORE visible
+        random: false
       },
       size: {
-        value: 1.1,
-        random: true
+        value: 1.6,                 // ✅ sharper dots
+        random: false
       },
       line_linked: {
-        enable: false              // ❌ no lines (FPS win)
+        enable: false
       },
       move: {
         enable: true,
-        speed: 0.25,               // slow = premium
-        random: true,
+        speed: 0.4,                 // subtle motion so eyes catch it
+        direction: "none",
         out_mode: "out"
       }
     },
@@ -64,10 +64,11 @@ window.addEventListener("load", () => {
         onclick: { enable: false }
       }
     },
-    retina_detect: true
+    retina_detect: false            // 🔥 IMPORTANT (removes blur)
   });
 });
 </script>
+
 
 
 
