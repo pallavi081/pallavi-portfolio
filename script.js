@@ -88,4 +88,33 @@ document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const dot = document.createElement("div");
+  const ring = document.createElement("div");
+
+  dot.className = "cursor-dot";
+  ring.className = "cursor-ring";
+
+  document.body.appendChild(dot);
+  document.body.appendChild(ring);
+
+  document.addEventListener("mousemove", (e) => {
+    dot.style.left = e.clientX + "px";
+    dot.style.top = e.clientY + "px";
+
+    ring.style.left = e.clientX + "px";
+    ring.style.top = e.clientY + "px";
+  });
+
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      document.body.classList.add("cursor-hover");
+    });
+    el.addEventListener("mouseleave", () => {
+      document.body.classList.remove("cursor-hover");
+    });
+  });
+
+});
 
