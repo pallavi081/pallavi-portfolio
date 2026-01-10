@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 });
 
-document.addEventListener("DOMContentLoaded", () => {
 
+document.addEventListener("DOMContentLoaded", () => {
   const dot = document.createElement("div");
   const ring = document.createElement("div");
 
@@ -99,13 +99,27 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(dot);
   document.body.appendChild(ring);
 
-  document.addEventListener("mousemove", (e) => {
-    dot.style.left = e.clientX + "px";
-    dot.style.top = e.clientY + "px";
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
 
-    ring.style.left = e.clientX + "px";
-    ring.style.top = e.clientY + "px";
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    dot.style.left = mouseX + "px";
+    dot.style.top = mouseY + "px";
   });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
 
   document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("mouseenter", () => {
@@ -115,6 +129,5 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("cursor-hover");
     });
   });
-
 });
 
