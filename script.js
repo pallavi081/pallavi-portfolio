@@ -130,4 +130,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+particlesJS("particles", {
+  particles: {
+    number: {
+      value: 160,
+      density: {
+        enable: true,
+        value_area: 900
+      }
+    },
+    color: {
+      value: "#38bdf8"
+    },
+    shape: {
+      type: "circle"
+    },
+    opacity: {
+      value: 0.35,
+      random: true
+    },
+    size: {
+      value: 1.8,
+      random: true
+    },
+    line_linked: {
+      enable: false
+    },
+    move: {
+      enable: true,
+      speed: 0.6,
+      direction: "none",
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: false
+      },
+      onclick: {
+        enable: false
+      }
+    }
+  },
+  retina_detect: true
+});
 
