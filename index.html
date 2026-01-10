@@ -24,53 +24,51 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
-  window.addEventListener("load", () => {
-    particlesJS("particles", {
-      particles: {
-        number: {
-          value: 320,                 // 🔥 LOTS of particles
-          density: {
-            enable: true,
-            value_area: 900
-          }
-        },
-        color: {
-          value: "#38bdf8"            // premium blue
-        },
-        shape: {
-          type: "circle"
-        },
-        opacity: {
-          value: 0.25,                // subtle
-          random: true
-        },
-        size: {
-          value: 1.2,                 // VERY SMALL dots
-          random: true
-        },
-        line_linked: {
-          enable: false               // ❌ no lines (important)
-        },
-        move: {
+window.addEventListener("load", () => {
+  particlesJS("particles", {
+    particles: {
+      number: {
+        value: 500,          // 🔥 LOT of particles
+        density: {
           enable: true,
-          speed: 0.35,                // slow floating
-          direction: "none",
-          random: true,
-          straight: false,
-          out_mode: "out"
+          value_area: 500    // 🔑 smaller = MORE visible particles
         }
       },
-      interactivity: {
-        events: {
-          onhover: { enable: false },
-          onclick: { enable: false },
-          resize: true
-        }
+      color: {
+        value: "#38bdf8"
       },
-      retina_detect: true
-    });
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.35,
+        random: true
+      },
+      size: {
+        value: 1.2,
+        random: true
+      },
+      line_linked: {
+        enable: false        // ❌ no lines
+      },
+      move: {
+        enable: true,
+        speed: 0.3,          // slow premium motion
+        random: true,
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: false },
+        onclick: { enable: false }
+      }
+    },
+    retina_detect: true
   });
+});
 </script>
+
 
 
 
