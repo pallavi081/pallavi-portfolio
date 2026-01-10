@@ -14,11 +14,66 @@
 <script src="scroll-animations.js"></script>
 
 
-<div id="particles"></div>
+
 
 
 
 <body>
+<div id="particles"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <script>
+  window.addEventListener("load", () => {
+    if (!window.particlesJS) {
+      console.error("particles.js not loaded");
+      return;
+    }
+
+    particlesJS("particles", {
+      particles: {
+        number: {
+          value: 140,
+          density: {
+            enable: true,
+            value_area: 900
+          }
+        },
+        color: {
+          value: "#38bdf8"
+        },
+        shape: {
+          type: "circle"
+        },
+        opacity: {
+          value: 0.4,
+          random: true
+        },
+        size: {
+          value: 1.5,
+          random: true
+        },
+        line_linked: {
+          enable: false
+        },
+        move: {
+          enable: true,
+          speed: 0.6,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false }
+        }
+      },
+      retina_detect: true
+    });
+  });
+</script>
+
+
 
 <canvas id="particles"></canvas>
 
