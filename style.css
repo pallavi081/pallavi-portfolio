@@ -664,6 +664,23 @@ a.btn:hover {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
+/* ===== HERO SECTION (GLASS EFFECT) ===== */
+.hero {
+  min-height: 75vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
 
 
 
