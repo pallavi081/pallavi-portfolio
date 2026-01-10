@@ -64,24 +64,28 @@ initParticles();
 animateParticles();
 
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const heroLine = document.querySelector(".hero-line");
-
-  if (!heroLine) {
-    alert("hero-line not found");
-    return;
-  }
 
   const text = "CSE | Frontend Developer | Learning Backend & AI";
   let index = 0;
+  let isDeleting = false;
 
-  heroLine.textContent = "";
-
-  setInterval(() => {
-    if (index < text.length) {
-      heroLine.textContent += text.charAt(index);
-      index++;
+  function typeEffect() {
+    if (!isDeleting && index <= text.length) {
+      heroLine.textContent = text.slice(0, index++);
+    } 
+    else if (isDeleting && index >= 0) {
+      heroLine.textContent = text.slice(0, index--);
     }
-  }, 100);
+
+    if (index === text.length + 2) isDeleting = true;
+    if (index === 0) isDeleting = false;
+
+    setTimeout(typeEffect, isDeleting ? 50 : 90);
+  }
+
+  typeEffect();
 });
+
 
