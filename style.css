@@ -682,5 +682,20 @@ a.btn:hover {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.hero-buttons a {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(135deg, #00eaff, #0077ff);
+  color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 234, 255, 0.4);
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 234, 255, 0.6);
+}
 
 
