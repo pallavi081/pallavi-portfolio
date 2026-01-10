@@ -765,3 +765,6 @@ body.cursor-hover .cursor-ring {
   z-index: -1;
   pointer-events: none;
 }
+#particles canvas {
+  filter: none;
+}
