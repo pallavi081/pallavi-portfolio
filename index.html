@@ -13,12 +13,12 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="scroll-animations.js"></script>
 
-  <script>
+<script>
   const dot = document.createElement("div");
   const ring = document.createElement("div");
 
-  dot.classList.add("cursor-dot");
-  ring.classList.add("cursor-ring");
+  dot.className = "cursor-dot";
+  ring.className = "cursor-ring";
 
   document.body.appendChild(dot);
   document.body.appendChild(ring);
@@ -27,15 +27,11 @@
     dot.style.left = e.clientX + "px";
     dot.style.top = e.clientY + "px";
 
-    ring.animate({
-      left: e.clientX + "px",
-      top: e.clientY + "px"
-    }, { duration: 120, fill: "forwards" });
+    ring.style.left = e.clientX + "px";
+    ring.style.top = e.clientY + "px";
   });
 
-  const hoverTargets = document.querySelectorAll("a, button");
-
-  hoverTargets.forEach(el => {
+  document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("mouseenter", () => {
       document.body.classList.add("cursor-hover");
     });
@@ -44,6 +40,7 @@
     });
   });
 </script>
+
 
 
 <body>
