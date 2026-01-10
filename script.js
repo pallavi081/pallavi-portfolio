@@ -1,4 +1,4 @@
-alert("JS is working");
+
 /* ================= PARTICLES ================= */
 
 const canvas = document.getElementById("particles");
