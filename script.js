@@ -77,7 +77,9 @@ function typeEffect() {
 }
 
 typeEffect();
-/* ================= HERO TYPING EFFECT ================= */
+/* ================= HERO TYPING EFFECT (FIXED) ================= */
+
+const heroLine = document.querySelector(".hero-line");
 
 const roles = [
   "CSE Student",
@@ -88,32 +90,35 @@ const roles = [
 
 let roleIndex = 0;
 let charIndex = 0;
-const heroLine = document.querySelector(".hero-line");
+let isDeleting = false;
 
 function typeEffect() {
   if (!heroLine) return;
 
-  if (charIndex < roles[roleIndex].length) {
-    heroLine.textContent += roles[roleIndex].charAt(charIndex);
+  const currentText = roles[roleIndex];
+
+  if (!isDeleting) {
+    heroLine.textContent = currentText.substring(0, charIndex + 1);
     charIndex++;
-    setTimeout(typeEffect, 80);
-  } else {
-    setTimeout(eraseEffect, 1500);
-  }
-}
 
-function eraseEffect() {
-  if (charIndex > 0) {
-    heroLine.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    if (charIndex === currentText.length) {
+      setTimeout(() => (isDeleting = true), 1200);
+    }
+  } else {
+    heroLine.textContent = currentText.substring(0, charIndex - 1);
     charIndex--;
-    setTimeout(eraseEffect, 50);
-  } else {
-    roleIndex = (roleIndex + 1) % roles.length;
-    setTimeout(typeEffect, 300);
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
   }
+
+  setTimeout(typeEffect, isDeleting ? 60 : 90);
 }
 
-setTimeout(() => {
-  heroLine.textContent = "";
-  typeEffect();
-}, 1000);
+/* CLEAR EXISTING TEXT FIRST */
+heroLine.textContent = "";
+
+/* START EFFECT */
+setTimeout(typeEffect, 800);
