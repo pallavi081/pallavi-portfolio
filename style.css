@@ -1,6 +1,4 @@
-* {
-  cursor: none !important;
-}
+
 
 body {
   background: #020617;
@@ -769,3 +767,6 @@ body {
   opacity: 0.6;
 }
 
+* {
+  cursor: none !important;
+}
