@@ -759,3 +759,9 @@ body.cursor-hover .cursor-ring {
   z-index: -1;
 }
 
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
