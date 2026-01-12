@@ -780,3 +780,19 @@ body.cursor-hover .cursor-ring {
 #particles-back { opacity: 0.45; }
 #particles-mid  { opacity: 0.65; }
 #particles-front{ opacity:   1; }
+
+/* Ensure hero content is above particles */
+.hero,
+.navbar,
+section,
+footer {
+  position: relative;
+  z-index: 5;
+}
+
+/* Particle layers stay behind */
+#particles-back,
+#particles-mid,
+#particles-front {
+  z-index: 0;
+}
