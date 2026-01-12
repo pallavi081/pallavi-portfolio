@@ -836,3 +836,7 @@ footer {
   z-index: 0;          /* background */
   pointer-events: none;
 }
+.hero-right {
+  opacity: 1;
+  transform: none;
+}
