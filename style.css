@@ -1,3 +1,9 @@
+.hero,
+.main,
+.container {
+  position: relative;
+  z-index: 2;
+}
 
 
 body {
@@ -823,4 +829,10 @@ footer {
 }
 .profile-pic {
   border-radius: 50%;
+}
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;          /* background */
+  pointer-events: none;
 }
