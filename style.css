@@ -768,3 +768,15 @@ body.cursor-hover .cursor-ring {
 #particles canvas {
   filter: none;
 }
+#particles-back,
+#particles-mid,
+#particles-front {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#particles-back { opacity: 0.35; }
+#particles-mid  { opacity: 0.55; }
+#particles-front{ opacity: 0.85; }
