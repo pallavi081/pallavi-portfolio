@@ -796,3 +796,28 @@ footer {
 #particles-front {
   z-index: 0;
 }
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  min-height: 80vh;
+  padding: 120px 8%;
+}
+
+.hero-left {
+  flex: 1.2;
+}
+
+.hero-right {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-right img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px; /* NOT circle */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
