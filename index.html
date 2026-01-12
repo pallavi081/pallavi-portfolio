@@ -18,55 +18,70 @@
 
 
 
+
 <body>
 <div id="particles"></div>
+  <div id="particles-back"></div>
+<div id="particles-mid"></div>
+<div id="particles-front"></div>
   
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
+<script>
 window.addEventListener("load", () => {
-  particlesJS("particles", {
+
+  const base = {
+    color: "#38bdf8",
+    shape: "circle",
+    line: false
+  };
+
+  /* BACK LAYER — far, slow */
+  particlesJS("particles-back", {
     particles: {
-      number: {
-        value: 900,                 // 🔥 VERY MANY particles
-        density: {
-          enable: true,
-          value_area: 350           // 🔑 tighter = denser
-        }
-      },
-      color: {
-        value: "#38bdf8"
-      },
-      shape: {
-        type: "circle"
-      },
-      opacity: {
-        value: 0.50,                // ✅ MUCH MORE visible
-        random: false
-      },
-      size: {
-        value: 0.6,                 // ✅ sharper dots
-        random: false
-      },
-      line_linked: {
-        enable: false
-      },
-      move: {
-        enable: true,
-        speed: 0.4,                 // subtle motion so eyes catch it
-        direction: "none",
-        out_mode: "out"
-      }
+      number: { value: 350, density: { enable: true, value_area: 900 } },
+      color: { value: base.color },
+      shape: { type: base.shape },
+      opacity: { value: 0.4 },
+      size: { value: 1 },
+      line_linked: { enable: false },
+      move: { enable: true, speed: 0.15 }
     },
-    interactivity: {
-      events: {
-        onhover: { enable: false },
-        onclick: { enable: false }
-      }
-    },
-    retina_detect: false            // 🔥 IMPORTANT (removes blur)
+    retina_detect: false
   });
+
+  /* MID LAYER — main */
+  particlesJS("particles-mid", {
+    particles: {
+      number: { value: 500, density: { enable: true, value_area: 600 } },
+      color: { value: base.color },
+      shape: { type: base.shape },
+      opacity: { value: 0.7 },
+      size: { value: 1.4 },
+      line_linked: { enable: false },
+      move: { enable: true, speed: 0.4 }
+    },
+    retina_detect: false
+  });
+
+  /* FRONT LAYER — near, sharp */
+  particlesJS("particles-front", {
+    particles: {
+      number: { value: 250, density: { enable: true, value_area: 400 } },
+      color: { value: base.color },
+      shape: { type: base.shape },
+      opacity: { value: 1 },
+      size: { value: 1.8 },
+      line_linked: { enable: false },
+      move: { enable: true, speed: 0.8 }
+    },
+    retina_detect: false
+  });
+
 });
+</script>
+
 </script>
 
 
