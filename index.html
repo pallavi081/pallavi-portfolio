@@ -7,46 +7,24 @@
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="particles-config.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="scroll-animations.js"></script>
 
-
-
-
-
-
-
-<body>
-<body>
-
-<!-- PARTICLE LAYERS -->
-<div id="particles-back"></div>
-<div id="particles-mid"></div>
-<div id="particles-front"></div>
-
-  
+  <!-- Particles -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
 
 
 <script>
 window.addEventListener("load", () => {
 
-  const base = {
-    color: "#38bdf8",
-    shape: "circle",
-    line: false
-  };
+  const baseColor = "#38bdf8";
 
-  /* BACK LAYER — far, slow */
   particlesJS("particles-back", {
     particles: {
       number: { value: 350, density: { enable: true, value_area: 900 } },
-      color: { value: base.color },
-      shape: { type: base.shape },
-      opacity: { value: 0.4 },
+      color: { value: baseColor },
+      shape: { type: "circle" },
+      opacity: { value: 0.35 },
       size: { value: 1 },
       line_linked: { enable: false },
       move: { enable: true, speed: 0.15 }
@@ -54,13 +32,12 @@ window.addEventListener("load", () => {
     retina_detect: false
   });
 
-  /* MID LAYER — main */
   particlesJS("particles-mid", {
     particles: {
-      number: { value: 500, density: { enable: true, value_area: 600 } },
-      color: { value: base.color },
-      shape: { type: base.shape },
-      opacity: { value: 0.7 },
+      number: { value: 600, density: { enable: true, value_area: 700 } },
+      color: { value: baseColor },
+      shape: { type: "circle" },
+      opacity: { value: 0.6 },
       size: { value: 1.4 },
       line_linked: { enable: false },
       move: { enable: true, speed: 0.4 }
@@ -68,12 +45,11 @@ window.addEventListener("load", () => {
     retina_detect: false
   });
 
-  /* FRONT LAYER — near, sharp */
   particlesJS("particles-front", {
     particles: {
-      number: { value: 250, density: { enable: true, value_area: 400 } },
-      color: { value: base.color },
-      shape: { type: base.shape },
+      number: { value: 300, density: { enable: true, value_area: 500 } },
+      color: { value: baseColor },
+      shape: { type: "circle" },
       opacity: { value: 1 },
       size: { value: 1.8 },
       line_linked: { enable: false },
@@ -87,13 +63,17 @@ window.addEventListener("load", () => {
 
 
 
+<body>
+
+<!-- PARTICLE LAYERS -->
+<div id="particles-back"></div>
+<div id="particles-mid"></div>
+<div id="particles-front"></div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 
-
-
-
-
-<canvas id="particles"></canvas>
 
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar">
