@@ -777,6 +777,6 @@ body.cursor-hover .cursor-ring {
   pointer-events: none;
 }
 
-#particles-back { opacity: 0.35; }
-#particles-mid  { opacity: 0.55; }
-#particles-front{ opacity: 0.85; }
+#particles-back { opacity: 0.45; }
+#particles-mid  { opacity: 0.65; }
+#particles-front{ opacity:   1; }
