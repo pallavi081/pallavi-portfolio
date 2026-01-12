@@ -840,3 +840,15 @@ footer {
   opacity: 1;
   transform: none;
 }
+/* background */
+#particles { z-index: 0; }
+
+/* depth glow layers */
+.depth-layer { z-index: 1; }
+
+/* content */
+.hero { z-index: 3; }
+
+/* cursor */
+.cursor-dot,
+.cursor-ring { z-index: 9999; }
