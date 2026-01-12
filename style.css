@@ -821,3 +821,6 @@ footer {
   border-radius: 12px; /* NOT circle */
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
 }
+.profile-pic {
+  border-radius: 50%;
+}
