@@ -32,5 +32,4 @@ ScrollReveal().reveal(
 );
 
 
-/*SECTIONS*/
-scrollReveal().reveal(sectionh2",{
+
