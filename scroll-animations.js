@@ -30,3 +30,7 @@ ScrollReveal().reveal(
     origin: "bottom"
   }
 );
+
+
+/*SECTIONS*/
+scrollReveal().reveal(sectionh2",{
