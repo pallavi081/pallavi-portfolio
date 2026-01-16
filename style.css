@@ -1065,3 +1065,8 @@ footer {
   color: #9ca3af;
   margin-top: 8px;
 }
+
+
+.hero {
+  background: radial-gradient(circle at top left, #0a1a2f, #020617 70%);
+}
