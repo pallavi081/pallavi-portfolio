@@ -1268,63 +1268,81 @@ footer {
 }
 
 
-/* ===== EXPERIENCE SECTION ===== */
+/* ===== APPLE STYLE EXPERIENCE ===== */
 
 .experience {
-  padding: 100px 8%;
-  position: relative;
+  padding: 120px 8%;
+  text-align: center;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 60px;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #9ca3af;
+  margin-bottom: 70px;
+  font-size: 16px;
 }
 
 /* GRID */
-.experience-container {
+.experience-apple {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
+  gap: 40px;
+  max-width: 1200px;
   margin: auto;
 }
 
 /* CARD */
-.experience-card {
+.exp-card.apple {
+  position: relative;
+  padding: 40px 32px;
+  border-radius: 24px;
   background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
   border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 18px;
-  padding: 28px;
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: all 0.45s cubic-bezier(.2,.8,.2,1);
+  text-align: left;
 }
 
-.experience-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+/* HOVER EFFECT */
+.exp-card.apple:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+/* BADGE */
+.exp-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 18px;
 }
 
 /* TEXT */
-.experience-card h3 {
-  font-size: 20px;
+.exp-card h3 {
+  font-size: 22px;
   margin-bottom: 6px;
 }
 
-.company {
+.exp-card span {
   color: #38bdf8;
   font-size: 14px;
-  font-weight: 600;
+  display: block;
+  margin-bottom: 14px;
 }
 
-.duration {
-  font-size: 13px;
-  color: #aaa;
-  margin: 6px 0 12px;
-}
-
-.exp-desc {
-  font-size: 14.5px;
+.exp-card p {
+  font-size: 15px;
   line-height: 1.7;
-  color: #e0e0e0;
+  color: #e5e7eb;
 }
