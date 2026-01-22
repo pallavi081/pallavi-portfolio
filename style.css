@@ -1222,3 +1222,149 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+/* ================= APPLE STYLE HERO ================= */
+
+.hero {
+  max-width: 1100px;
+  margin: 120px auto 80px;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT CONTENT */
+.hero-left {
+  animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.hero-line {
+  font-size: 1.05rem;
+  color: #38bdf8;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #cbd5f5;
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+/* POINTS */
+.hero-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.hero-points li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #e5e7eb;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 11px 26px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  padding: 11px 26px;
+  border: 1.5px solid #38bdf8;
+  color: #38bdf8;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* RIGHT IMAGE */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  animation: heroFadeIn 1.2s ease forwards;
+}
+
+.hero-right img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  box-shadow: 0 0 25px rgba(56,189,248,.4);
+}
+
+/* ANIMATIONS */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
