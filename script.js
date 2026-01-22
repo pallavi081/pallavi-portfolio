@@ -113,3 +113,29 @@ particlesJS("particles", {
   retina_detect: true
 });
 
+// ===== Scroll Reveal Animation =====
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 120;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// ===== View More Toggle =====
+document.querySelectorAll(".view-more-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.parentElement;
+    card.classList.toggle("expanded");
+    btn.textContent = card.classList.contains("expanded") ? "View Less" : "View More";
+  });
+});
