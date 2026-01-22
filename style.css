@@ -1107,3 +1107,118 @@ footer {
   box-shadow: 0 5px 15px rgba(56,189,248,0.5);
   z-index: 2;
 }
+
+
+/* ================= EXPERIENCE TIMELINE PRO ================= */
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #38bdf8, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.timeline-icon {
+  width: 36px;
+  height: 36px;
+  background: #020617;
+  border: 2px solid #38bdf8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 0 15px rgba(56,189,248,0.6);
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(56,189,248,0.25);
+  border-radius: 18px;
+  padding: 24px;
+  transition: all 0.35s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(56,189,248,0.35);
+}
+
+.timeline-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.company {
+  display: block;
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.duration {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 6px 0 10px;
+}
+
+.short-desc {
+  font-size: 0.95rem;
+}
+
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.timeline-content.expanded .more-content {
+  max-height: 300px;
+}
+
+.view-more-btn {
+  margin-top: 12px;
+  background: none;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.view-more-btn:hover {
+  background: #38bdf8;
+  color: #000;
+}
+
+/* ===== Scroll Reveal Effect ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
