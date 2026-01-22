@@ -1070,3 +1070,40 @@ footer {
 .hero {
   background: radial-gradient(circle at top left, #0a1a2f, #020617 70%);
 }
+/* ================= FEATURED PROJECT (PALLAVI AI) ================= */
+
+.featured-project {
+  position: relative;
+  border: 1px solid rgba(56,189,248,0.4);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,0.2),
+    0 0 40px rgba(56,189,248,0.25);
+  background: linear-gradient(
+    180deg,
+    rgba(56,189,248,0.08),
+    rgba(2,6,23,0.95)
+  );
+  transform: scale(1.02);
+}
+
+.featured-project:hover {
+  transform: scale(1.05) translateY(-6px);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,0.4),
+    0 0 60px rgba(56,189,248,0.45);
+}
+
+/* Featured badge */
+.featured-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #38bdf8, #22d3ee);
+  color: #020617;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 5px 15px rgba(56,189,248,0.5);
+  z-index: 2;
+}
