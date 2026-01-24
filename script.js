@@ -156,3 +156,32 @@ ScrollReveal().reveal(".contact-card", {
   easing: "cubic-bezier(0.16, 1, 0.3, 1)",
   reset: false
 });
+
+const dot = document.createElement("div");
+const ring = document.createElement("div");
+
+dot.classList.add("cursor-dot");
+ring.classList.add("cursor-ring");
+
+document.body.appendChild(dot);
+document.body.appendChild(ring);
+
+document.addEventListener("mousemove", (e) => {
+  dot.style.left = e.clientX + "px";
+  dot.style.top = e.clientY + "px";
+
+  ring.style.left = e.clientX + "px";
+  ring.style.top = e.clientY + "px";
+});
+
+/* Hover enlarge */
+const hoverTargets = document.querySelectorAll("a, button, .project-card, .contact-pro-card");
+
+hoverTargets.forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    document.body.classList.add("cursor-hover");
+  });
+  el.addEventListener("mouseleave", () => {
+    document.body.classList.remove("cursor-hover");
+  });
+});
