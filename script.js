@@ -147,3 +147,12 @@ ScrollReveal().reveal(".timeline-item", {
   easing: "cubic-bezier(0.16, 1, 0.3, 1)",
   reset: false
 });
+
+ScrollReveal().reveal(".contact-card", {
+  distance: "80px",
+  origin: "bottom",
+  duration: 1000,
+  interval: 200,
+  easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+  reset: false
+});
