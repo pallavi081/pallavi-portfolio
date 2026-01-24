@@ -139,3 +139,11 @@ document.querySelectorAll(".view-more-btn").forEach(btn => {
     btn.textContent = card.classList.contains("expanded") ? "View Less" : "View More";
   });
 });
+ScrollReveal().reveal(".timeline-item", {
+  distance: "80px",
+  origin: "bottom",
+  duration: 1000,
+  interval: 200,
+  easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+  reset: false
+});
