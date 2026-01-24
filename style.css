@@ -1504,3 +1504,43 @@ footer {
   font-size: 14px;
 }
 
+/* ================= PREMIUM CURSOR ================= */
+
+body {
+  cursor: none; /* hide default cursor */
+}
+
+/* Small dot */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+/* Ring */
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(56,189,248,0.6);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, border 0.2s ease;
+  box-shadow: 0 0 20px rgba(56,189,248,0.6);
+}
+
+/* Hover effect */
+.cursor-hover .cursor-ring {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #38bdf8;
+}
+
