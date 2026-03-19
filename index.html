@@ -1,369 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Pallavi Kumari | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Particles -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pallavi Kumari | Premium Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-
-
-<script>
-window.addEventListener("load", () => {
-
-  const baseColor = "#38bdf8";
-
-  particlesJS("particles-back", {
-    particles: {
-      number: { value: 350, density: { enable: true, value_area: 900 } },
-      color: { value: baseColor },
-      shape: { type: "circle" },
-      opacity: { value: 0.45 },
-      size: { value: 0.4 },
-      line_linked: { enable: false },
-      move: { enable: true, speed: 0.15 }
-    },
-    retina_detect: false
-  });
-
-  particlesJS("particles-mid", {
-    particles: {
-      number: { value: 500, density: { enable: true, value_area: 800 } },
-      color: { value: baseColor },
-      shape: { type: "circle" },
-      opacity: { value: 0.65 },
-      size: { value: 0.5 },
-      line_linked: { enable: false },
-      move: { enable: true, speed: 0.4 }
-    },
-    retina_detect: false
-  });
-
-  particlesJS("particles-front", {
-    particles: {
-      number: { value: 400, density: { enable: true, value_area: 600 } },
-      color: { value: baseColor },
-      shape: { type: "circle" },
-      opacity: { value: 1 },
-      size: { value: 0.6 },
-      line_linked: { enable: false },
-      move: { enable: true, speed: 0.8 }
-    },
-    retina_detect: false
-  });
-
-});
-</script>
-
-
-
 <body>
 
-<!-- PARTICLE LAYERS -->
-<div id="particles-back"></div>
-<div id="particles-mid"></div>
-<div id="particles-front"></div>
+  <!-- Premium Particles Background -->
+  <div id="particles-js"></div>
 
-  
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
 
+  <!-- Background Animated Gradient (Optimized for performance) -->
+  <div class="bg-gradient"></div>
 
-
-
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <h1 class="logo">Pallavi Kumari</h1>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- ================= HERO ================= -->
-<section class="hero">
-
-  <div class="hero-left">
-    <h1 class="hero-name">Pallavi Kumari</h1>
-
-    <p class="hero-title">
-      CSE | Frontend Developer | Learning Backend & AI
-    </p>
-
-    <p class="hero-desc">
-      I am a passionate Computer Science Engineering student with a strong
-      interest in web development. I enjoy building real-world projects,
-      learning new technologies, and continuously improving my skills.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#projects" class="btn-primary">View My Work</a>
-      <a href="resume.pdf" class="btn-outline" download>Download Resume</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <img src="profile.jpg" alt="Pallavi Kumari" class="profile-pic">
-  </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-  <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a Computer Science Engineering student with a strong foundation in
-    programming and web development. I have hands-on experience in building
-    responsive websites using HTML, CSS, and JavaScript. I am a quick learner,
-    detail-oriented, and eager to contribute to real-world software projects
-    while continuously improving my technical skills.
-  </p>
-     <ul class="hero-points">
-        <li>✨ Strong foundation in HTML, CSS & JavaScript</li>
-        <li>🚀 Hands-on experience with real-world projects</li>
-        <li>📚 Passionate learner exploring Backend & AI</li>
-        <li>💡 Problem-solving & project-based learning</li>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">P<span>K.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-</section>
-
-  <!-- ================= SKILLS ================= -->
-<section id="skills">
-  <h2>Skills</h2>
-<div class="skills-grid">
-  <div>🐍 Python</div>
-  <div>☕ Java</div>
-  <div>🎨 HTML & CSS</div>
-  <div>⚡ JavaScript (Basics)</div>
-  <div>🗄️ MySQL (Basics)</div>
-  <div>🧠 OOP & DSA (Basics)</div>
-</div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-<section id="live-websites">
-  <h2 class="section-title">My Live Websites</h2>
-
-  <div class="websites-container">
-<!-- ⭐ FEATURED: PALLAVI AI VIRTUAL ASSISTANT -->
-<div class="website-card featured-project">
-
-  <div class="featured-badge">⭐ Featured</div>
-
-  <img src="pallavi-ai.png" alt="Pallavi AI Virtual Assistant">
-
-  <h3>Pallavi AI – Virtual Assistant</h3>
-
-  <p>
-    An AI-powered virtual assistant that interacts with users, answers questions,
-    and performs basic tasks using smart APIs and a clean UI.
-  </p>
-
-  <div class="tags">
-    <span>JavaScript</span>
-    <span>AI</span>
-    <span>API</span>
-    <span>UI/UX</span>
-  </div>
-
-  <a href="https://pallavi-ai-project.vercel.app/" target="_blank" class="visit-btn">
-       Visit Site 🌐
-  </a>
-
-</div>
-
-
-    
-
-    
-   
-    
-    <!-- LK AUTO -->
-    <div class="website-card">
-      <img src="lk-auto.png" alt="LK Auto Website">
-
-      <h3>LK Auto</h3>
-      <p>Automobile service website with service listings and contact system.</p>
-
-      <div class="tags">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-
-      <a href="https://YOUR_LK_AUTO_LINK" target="_blank" class="visit-btn">
-        Visit Site 🌐
-      </a>
     </div>
+  </header>
 
-    <!-- EDUSCHEDULER -->
-    <div class="website-card">
-      <img src="images/eduscheduler.png" alt="EduScheduler Website">
-
-      <h3>EduScheduler</h3>
-      <p>Education scheduling platform for managing classes and time tables.</p>
-
-      <div class="tags">
-        <span>Frontend</span>
-        <span>JavaScript</span>
-        <span>UI Design</span>
-      </div>
-
-      <a href="https://YOUR_EDUSCHEDULER_LINK" target="_blank" class="visit-btn">
-        Visit Site 🌐
-      </a>
-    </div>
-
-    <!-- SNAKE GAME -->
-    <div class="website-card">
-      <img src="images/snake-game.png" alt="Snake Game">
-
-      <h3>Snake Game</h3>
-      <p>Classic snake game built using JavaScript.</p>
-
-      <div class="tags">
-        <span>JavaScript</span>
-        <span>Game</span>
-        <span>Logic</span>
-      </div>
-
-      <a href="https://pallavi081.github.io/snake_race/" target="_blank" class="visit-btn">
-        Live Demo 🎮
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-<section class="experience" id="experience">
-  <h2 class="section-title">Experience</h2>
-  <p class="section-subtitle">Real-world work, leadership & learning by building</p>
-
-  <div class="timeline">
-
-    <!-- Web Developer -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <span class="timeline-year">2025</span>
-        <h3>Web Developer Intern</h3>
-        <h4>HexSoftware</h4>
-        <p>
-          Built modern websites, UI components, portfolio systems and real-world
-          project interfaces using HTML, CSS, JavaScript and React.
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero section-reveal">
+      <div class="hero-content">
+        <h2 class="greeting">Hello, I'm</h2>
+        <h1 class="hero-name">Pallavi Kumari</h1>
+        <div class="hero-roles">
+          <span class="typed-text"></span><span class="cursor-blink">&nbsp;</span>
+        </div>
+        <p class="hero-tagline">CSE | Frontend Developer | Learning Backend & AI</p>
+        <p class="hero-desc">
+          I am a dedicated Computer Science Engineering student with an unwavering passion for software development and high-end web design. I continuously bridge the gap between elegant user interfaces and robust backend architectures to build scalable, real-world digital experiences.
         </p>
-        <div class="tech-tags">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span class="btn-text">View My Work</span>
+            <span class="btn-glow"></span>
+          </a>
+          <a href="resume.pdf" class="btn btn-outline" download>
+            <span class="btn-text">Download Resume</span>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Android developer -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <span class="timeline-year">2024</span>
-        <h3>Android Developer Intern</h3>
-        <h4>India Edu Program · Google for Developers</h4>
-        <p>
-          Worked on Android UI screens, layouts, app logic and debugging while
-          learning real-world development workflow.
-        </p>
-        <div class="tech-tags">
-          <span>Android</span><span>Java</span><span>UI</span><span>Debugging</span>
+    <!-- Section Separator -->
+    <div class="section-separator"></div>
+
+    <!-- About Section -->
+    <section id="about" class="about section-reveal">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-container">
+        <div class="about-image-wrapper">
+          <div class="about-glow-box"></div>
+          <img src="profile.jpg" alt="Pallavi Kumari" class="about-img">
+        </div>
+        <div class="about-text">
+          <h3 class="about-subtitle">Driven by Passion, Defined by Learning</h3>
+          <p>
+            I am a Computer Science Engineering student with a strong foundation in programming and web development. I have hands-on experience in building responsive websites using HTML, CSS, and JavaScript. I am a quick learner, detail-oriented, and eager to contribute to real-world software projects while continuously improving my technical skills.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">✨</span>
+              <p>Strong foundation in HTML, CSS & JS</p>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🚀</span>
+              <p>Hands-on building real-world projects</p>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📚</span>
+              <p>Passionate learner exploring Backend & AI</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Volunteer -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <span class="timeline-year">2023</span>
-        <h3>Volunteer</h3>
-        <h4>College Activities</h4>
-        <p>
-          Actively volunteered in college events and academic programs. Developed
-          teamwork, communication and organizational skills.
-        </p>
-        <div class="tech-tags">
-          <span>Teamwork</span><span>Communication</span><span>Organization</span>
+    <div class="section-separator"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-reveal">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid-modern">
+        <div class="skill-modern-card">
+          <span class="skill-icon">🐍</span>
+          <h4>Python</h4>
+        </div>
+        <div class="skill-modern-card">
+          <span class="skill-icon">☕</span>
+          <h4>Java</h4>
+        </div>
+        <div class="skill-modern-card">
+          <span class="skill-icon">🎨</span>
+          <h4>HTML & CSS</h4>
+        </div>
+        <div class="skill-modern-card">
+          <span class="skill-icon">⚡</span>
+          <h4>JavaScript (Basics)</h4>
+        </div>
+        <div class="skill-modern-card">
+          <span class="skill-icon">🗄️</span>
+          <h4>MySQL (Basics)</h4>
+        </div>
+        <div class="skill-modern-card">
+          <span class="skill-icon">🧠</span>
+          <h4>OOP & DSA (Basics)</h4>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Leadership -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <span class="timeline-year">2023 - 2024</span>
-        <h3>Discipline Coordinator</h3>
-        <h4>DC Hostel</h4>
-        <p>
-          Managed discipline, coordination and student activities. Built strong
-          leadership, responsibility and people management skills.
-        </p>
-        <div class="tech-tags">
-          <span>Leadership</span><span>Management</span><span>Responsibility</span>
+    <div class="section-separator"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-reveal">
+      <h2 class="section-title">My Live Websites</h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card featured-project">
+          <div class="project-img-wrapper">
+            <img src="pallavi-ai.png" alt="Pallavi AI Virtual Assistant">
+            <div class="project-overlay">
+              <a href="https://pallavi-ai-project.vercel.app/" class="project-link" target="_blank">Visit Site 🌐</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="featured-badge">⭐ Featured</div>
+            <h3 class="project-title">Pallavi AI – Virtual Assistant</h3>
+            <p class="project-desc">An AI-powered virtual assistant that interacts with users, answers questions, and performs basic tasks using smart APIs and a clean UI.</p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>AI</span><span>API</span><span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img src="lk-auto.png" alt="LK Auto">
+            <div class="project-overlay">
+              <a href="#" class="project-link" target="_blank">Visit Site 🌐</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">LK Auto</h3>
+            <p class="project-desc">Automobile service website with service listings and contact system.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img src="eduscheduler.png" alt="EduScheduler">
+            <div class="project-overlay">
+              <a href="#" class="project-link" target="_blank">Visit Site 🌐</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">EduScheduler</h3>
+            <p class="project-desc">A premium education scheduling platform designed for seamless management of complex institutional timetables and academic classes.</p>
+            <div class="project-tech">
+              <span>Frontend</span><span>JavaScript</span><span>UI Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img src="snakegame.png" alt="Snake Game">
+            <div class="project-overlay">
+              <a href="https://pallavi081.github.io/snake_race/" class="project-link" target="_blank">Live Demo 🎮</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Snake Game</h3>
+            <p class="project-desc">A highly scalable, logic-driven recreation of the classic snake game, engineered using refined JavaScript algorithms for flawless execution.</p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>Game</span><span>Logic</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Experience Section (Replaced Achievements) -->
+    <section id="experience" class="achievements section-reveal">
+      <h2 class="section-title">Experience</h2>
+      <p class="contact-subtitle">Real-world work, leadership & learning by building</p>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h3 class="timeline-title">Web Developer Intern</h3>
+            <h4>HexSoftware</h4>
+            <p>Built modern websites, UI components, portfolio systems and real-world project interfaces using HTML, CSS, JavaScript and React.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024</div>
+            <h3 class="timeline-title">Android Developer Intern</h3>
+            <h4>India Edu Program · Google for Developers</h4>
+            <p>Worked on Android UI screens, layouts, app logic and debugging while learning real-world development workflow.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023 - 2024</div>
+            <h3 class="timeline-title">Discipline Coordinator</h3>
+            <h4>DC Hostel</h4>
+            <p>Managed discipline, coordination and student activities. Built strong leadership, responsibility and people management skills.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023</div>
+            <h3 class="timeline-title">Volunteer</h3>
+            <h4>College Activities</h4>
+            <p>Actively volunteered in college events and academic programs. Developed teamwork, communication and organizational skills.</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-reveal">
+      <h2 class="section-title">Let’s Build Something Together</h2>
+      <p class="contact-subtitle">Open to internships, projects, collaborations & opportunities 🚀</p>
+      
+      <div class="contact-container">
+        <!-- Socials Only (as in original) -->
+        <div class="contact-info" style="flex: 1; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+          <a href="mailto:shripallavi@gmail.com" class="info-card" style="flex: 1; min-width: 250px;">
+            <div class="info-icon">📧</div>
+            <h4>Email Me</h4>
+            <p>shripallavi@gmail.com</p>
+            <span class="info-link">Send Mail →</span>
+          </a>
+          <a href="https://github.com/pallavi081" target="_blank" class="info-card" style="flex: 1; min-width: 250px;">
+            <div class="info-icon">💻</div>
+            <h4>GitHub</h4>
+            <p>See my projects & code</p>
+            <span class="info-link">Open GitHub →</span>
+          </a>
+          <a href="https://www.linkedin.com/in/pallavi-kumari-03b1112b0" target="_blank" class="info-card" style="flex: 1; min-width: 250px;">
+            <div class="info-icon">💼</div>
+            <h4>LinkedIn</h4>
+            <p>Let’s connect professionally</p>
+            <span class="info-link">Open LinkedIn →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2 class="footer-logo">P<span>K.</span></h2>
+      <p class="copyright">© 2026 Pallavi Kumari — Crafted with 💙</p>
     </div>
+  </footer>
 
-  </div>
-</section>
-
-
-
-<!-- ================= CONTACT ================= -->
-<section class="contact-pro" id="contact">
-
-  <div class="contact-glow"></div>
-
-  <h2 class="section-title">Let’s Build Something Together</h2>
-  <p class="section-subtitle">
-    Open to internships, projects, collaborations & opportunities 🚀
-  </p>
-
-  <div class="contact-pro-grid">
-
-    <!-- EMAIL -->
-    <a href="mailto:shripallavi@gmail.com" class="contact-pro-card">
-      <div class="contact-pro-icon">📧</div>
-      <h3>Email Me</h3>
-      <p>shripallavi@gmail.com</p>
-      <span class="contact-action">Send Mail →</span>
-    </a>
-
-    <!-- GITHUB -->
-    <a href="https://github.com/pallavi081" target="_blank" class="contact-pro-card">
-      <div class="contact-pro-icon">💻</div>
-      <h3>GitHub</h3>
-      <p>See my projects & code</p>
-      <span class="contact-action">Open GitHub →</span>
-    </a>
-
-    <!-- LINKEDIN -->
-    <a href="https://www.linkedin.com/in/pallavi-kumari-03b1112b0" target="_blank" class="contact-pro-card">
-      <div class="contact-pro-icon">💼</div>
-      <h3>LinkedIn</h3>
-      <p>Let’s connect professionally</p>
-      <span class="contact-action">Open LinkedIn →</span>
-    </a>
-
-  </div>
-
-</section>
-
-<footer class="footer-pro">
-  © 2026 Pallavi Kumari — Crafted with 💙
-</footer>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+</body>
+</html>

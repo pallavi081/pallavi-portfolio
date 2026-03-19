@@ -1,187 +1,163 @@
+/* ==========================================================================
+   Premium Portfolio Interactions (Optimized for performance)
+========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ==========================================
+  // Preloader Logic (Removed for absolute speed, assuming fast load)
+  // If user wants absolute speed, dropping preloader removes the 1.5s delay.
+  // We deleted the preloader in HTML, so no JS code needed here for it.
+  // ==========================================
 
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const heroLine = document.querySelector(".hero-line");
-
-  const text = "CSE | Frontend Developer | Learning Backend & AI";
-  let index = 0;
-  let isDeleting = false;
-
-  function typeEffect() {
-    if (!isDeleting && index <= text.length) {
-      heroLine.textContent = text.slice(0, index++);
-    } 
-    else if (isDeleting && index >= 0) {
-      heroLine.textContent = text.slice(0, index--);
-    }
-
-    if (index === text.length + 2) isDeleting = true;
-    if (index === 0) isDeleting = false;
-
-    setTimeout(typeEffect, isDeleting ? 50 : 90);
-  }
-
-  typeEffect();
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const dot = document.createElement("div");
-  const ring = document.createElement("div");
-
-  dot.className = "cursor-dot";
-  ring.className = "cursor-ring";
-
-  document.body.appendChild(dot);
-  document.body.appendChild(ring);
-
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  document.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    dot.style.left = mouseX + "px";
-    dot.style.top = mouseY + "px";
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-
-    ring.style.left = ringX + "px";
-    ring.style.top = ringY + "px";
-
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  document.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("mouseenter", () => {
-      document.body.classList.add("cursor-hover");
-    });
-    el.addEventListener("mouseleave", () => {
-      document.body.classList.remove("cursor-hover");
-    });
-  });
-});
-particlesJS("particles", {
-  particles: {
-    number: {
-      value: 160,
-      density: {
-        enable: true,
-        value_area: 900
-      }
-    },
-    color: {
-      value: "#38bdf8"
-    },
-    shape: {
-      type: "circle"
-    },
-    opacity: {
-      value: 0.35,
-      random: true
-    },
-    size: {
-      value: 1.8,
-      random: true
-    },
-    line_linked: {
-      enable: false
-    },
-    move: {
-      enable: true,
-      speed: 0.6,
-      direction: "none",
-      out_mode: "out"
-    }
-  },
-  interactivity: {
-    events: {
-      onhover: {
-        enable: false
+  // ==========================================
+  // Premium Particles.js Initialization
+  // ==========================================
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 40, density: { enable: true, value_area: 800 } },
+        color: { value: '#d4af37' }, /* Premium Soft Gold */
+        shape: { type: 'circle' },
+        opacity: {
+          value: 0.4,
+          random: true,
+          anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false }
+        },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#d4af37', opacity: 0.15, width: 1 },
+        move: { enable: true, speed: 1, direction: 'none', random: true, out_mode: 'out' }
       },
-      onclick: {
-        enable: false
-      }
-    }
-  },
-  retina_detect: true
-});
-
-// ===== Scroll Reveal Animation =====
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const elementVisible = 120;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    }
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'bubble' }, onclick: { enable: false }, resize: true },
+        modes: { bubble: { distance: 200, size: 5, duration: 2, opacity: 0.8, speed: 3 } }
+      },
+      retina_detect: true
+    });
   }
-}
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+  // ==========================================
+  // Custom Cursor (Optimized)
+  // ==========================================
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorOutline = document.querySelector('.cursor-outline');
 
-// ===== View More Toggle =====
-document.querySelectorAll(".view-more-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const card = btn.parentElement;
-    card.classList.toggle("expanded");
-    btn.textContent = card.classList.contains("expanded") ? "View Less" : "View More";
+  // Check if device is touch or has no fine pointer
+  const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+  
+  if (!isTouchDevice) {
+    // using requestAnimationFrame for butter smooth 60fps cursor
+    let mouseX = 0;
+    let mouseY = 0;
+    let outlineX = 0;
+    let outlineY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      
+      // Exact position for dot instantly
+      cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+    });
+
+    const animateCursor = () => {
+      // trailing math
+      let distX = mouseX - outlineX;
+      let distY = mouseY - outlineY;
+      
+      outlineX = outlineX + (distX * 0.15); // speed 
+      outlineY = outlineY + (distY * 0.15);
+
+      if (cursorOutline) {
+         cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px) translate(-50%, -50%)`;
+      }
+      requestAnimationFrame(animateCursor);
+    };
+    animateCursor();
+
+    // Add Hover Effect class for specific elements
+    const hoverElements = document.querySelectorAll('a, button, .project-card, .info-card, .skill-modern-card');
+    
+    hoverElements.forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+  } else {
+    // Hide cursors on mobile completely
+    if(cursorDot) cursorDot.style.display = 'none';
+    if(cursorOutline) cursorOutline.style.display = 'none';
+    document.body.style.cursor = 'auto';
+  }
+
+  // ==========================================
+  // Navbar Scrolling & Mobile Menu
+  // ==========================================
+  const navbar = document.querySelector('.navbar');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  let lastScrollY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }, { passive: true }); // Passive true for performance
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
   });
-});
-ScrollReveal().reveal(".timeline-item", {
-  distance: "80px",
-  origin: "bottom",
-  duration: 1000,
-  interval: 200,
-  easing: "cubic-bezier(0.16, 1, 0.3, 1)",
-  reset: false
-});
 
-ScrollReveal().reveal(".contact-card", {
-  distance: "80px",
-  origin: "bottom",
-  duration: 1000,
-  interval: 200,
-  easing: "cubic-bezier(0.16, 1, 0.3, 1)",
-  reset: false
-});
-
-const dot = document.createElement("div");
-const ring = document.createElement("div");
-
-dot.classList.add("cursor-dot");
-ring.classList.add("cursor-ring");
-
-document.body.appendChild(dot);
-document.body.appendChild(ring);
-
-document.addEventListener("mousemove", (e) => {
-  dot.style.left = e.clientX + "px";
-  dot.style.top = e.clientY + "px";
-
-  ring.style.left = e.clientX + "px";
-  ring.style.top = e.clientY + "px";
-});
-
-/* Hover enlarge */
-const hoverTargets = document.querySelectorAll("a, button, .project-card, .contact-pro-card");
-
-hoverTargets.forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    document.body.classList.add("cursor-hover");
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
   });
-  el.addEventListener("mouseleave", () => {
-    document.body.classList.remove("cursor-hover");
+
+  // ==========================================
+  // Typed.js Initialization
+  // ==========================================
+  if (typeof Typed !== 'undefined') {
+    new Typed('.typed-text', {
+      strings: [
+        'Frontend Developer', 
+        'Problem Solver', 
+        'Tech Enthusiast'
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true,
+      showCursor: false 
+    });
+  }
+
+  // ==========================================
+  // Scroll Reveal Animations (High Performance Intersection Observer)
+  // ==========================================
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px', // trigger slightly before bottom
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, ob) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Stop observing once animated
+        ob.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.section-reveal').forEach(section => {
+    observer.observe(section);
   });
+
 });
