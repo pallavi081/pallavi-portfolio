@@ -17,22 +17,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', {
       particles: {
-        number: { value: 40, density: { enable: true, value_area: 800 } },
-        color: { value: '#d4af37' }, /* Premium Soft Gold */
+        number: { value: 75, density: { enable: true, value_area: 800 } },
+        color: { value: '#ebd07d' }, /* Perfect Lux Gold */
         shape: { type: 'circle' },
         opacity: {
-          value: 0.4,
+          value: 0.5,
           random: true,
-          anim: { enable: true, speed: 0.5, opacity_min: 0.1, sync: false }
+          anim: { enable: true, speed: 0.5, opacity_min: 0.2, sync: false }
         },
         size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: '#d4af37', opacity: 0.15, width: 1 },
-        move: { enable: true, speed: 1, direction: 'none', random: true, out_mode: 'out' }
+        line_linked: { enable: true, distance: 120, color: '#ebd07d', opacity: 0.25, width: 1 },
+        move: { enable: true, speed: 0.8, direction: 'none', random: true, out_mode: 'out' }
       },
       interactivity: {
         detect_on: 'canvas',
         events: { onhover: { enable: true, mode: 'bubble' }, onclick: { enable: false }, resize: true },
-        modes: { bubble: { distance: 200, size: 5, duration: 2, opacity: 0.8, speed: 3 } }
+        modes: { bubble: { distance: 150, size: 5, duration: 2, opacity: 0.8, speed: 3 } }
       },
       retina_detect: true
     });
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.section-reveal').forEach(section => {
+  document.querySelectorAll('.section-reveal, .stagger-container').forEach(section => {
     observer.observe(section);
   });
 
