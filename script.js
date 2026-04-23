@@ -161,3 +161,64 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+const track = document.querySelector('.projects-track');
+const cards = document.querySelectorAll('.project-card');
+
+let index = 0;
+let autoSlide;
+
+// clone first 3 cards for smooth loop
+cards.forEach((card, i) => {
+  if (i < 3) {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  }
+});
+
+function slideProjects() {
+  index++;
+  track.style.transform = `translateX(-${index * (100 / 3)}%)`;
+
+  // reset loop smoothly
+  if (index >= cards.length) {
+    setTimeout(() => {
+      track.style.transition = "none";
+      track.style.transform = "translateX(0)";
+      index = 0;
+    }, 800);
+
+    setTimeout(() => {
+      track.style.transition = "transform 0.8s ease";
+    }, 850);
+  }
+}
+
+// auto slide every 3 seconds
+function startAutoSlide() {
+  autoSlide = setInterval(slideProjects, 3000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
+
+// start
+startAutoSlide();
+
+// stop on hover
+track.addEventListener('mouseenter', stopAutoSlide);
+track.addEventListener('mouseleave', startAutoSlide);
+
+// swipe support (mobile)
+let startX = 0;
+
+track.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener('touchend', (e) => {
+  let endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) slideProjects();
+  if (endX - startX > 50) index = Math.max(index - 1, 0);
+});
