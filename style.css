@@ -643,14 +643,7 @@ section {
   padding: 4px 10px;
   border-radius: 20px;
 }
-.featured-project {
-  border: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
-}
 
-.featured-project:hover {
-  box-shadow: 0 0 60px rgba(236, 72, 153, 0.4);
-}
 /* ==========================================================================
   Achievements Section (Timeline)
 ========================================================================== */
