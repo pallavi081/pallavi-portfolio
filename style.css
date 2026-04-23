@@ -693,6 +693,56 @@ section {
 .project-card:hover .project-overlay {
   opacity: 1;
 }
+/* ===== SLIDER CONTROLS ===== */
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  background: transparent;
+  border: 1px solid rgba(212,175,55,0.4);
+  color: #d4af37;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  background: rgba(212,175,55,0.1);
+  transform: scale(1.1);
+}
+
+/* ===== SMOOTH TRACK ===== */
+
+.projects-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* smoother hover feel */
+.project-card {
+  min-width: calc(100% / 3 - 14px);
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* image zoom smooth */
+.project-img-wrapper img {
+  transition: transform 0.8s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
 /* ==========================================================================
   Achievements Section (Timeline)
 ========================================================================== */
