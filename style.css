@@ -742,6 +742,15 @@ section {
 
 .project-card:hover img {
   transform: scale(1.05);
+}.project-card {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+.project-card.active-center {
+  opacity: 1;
+  transform: scale(1);
 }
 /* ==========================================================================
   Achievements Section (Timeline)
