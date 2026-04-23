@@ -163,62 +163,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 const track = document.querySelector('.projects-track');
 const cards = document.querySelectorAll('.project-card');
+const leftBtn = document.querySelector('.arrow.left');
+const rightBtn = document.querySelector('.arrow.right');
 
 let index = 0;
 let autoSlide;
 
-// clone first 3 cards for smooth loop
-cards.forEach((card, i) => {
-  if (i < 3) {
-    const clone = card.cloneNode(true);
-    track.appendChild(clone);
-  }
+// clone all cards for infinite smooth effect
+cards.forEach(card => {
+  const clone = card.cloneNode(true);
+  track.appendChild(clone);
 });
 
-function slideProjects() {
-  index++;
+const total = document.querySelectorAll('.project-card').length;
+
+function moveSlide(dir = 1) {
+  index += dir;
   track.style.transform = `translateX(-${index * (100 / 3)}%)`;
 
-  // reset loop smoothly
-  if (index >= cards.length) {
+  // reset smoothly (no visible jump)
+  if (index >= total / 2) {
     setTimeout(() => {
       track.style.transition = "none";
       track.style.transform = "translateX(0)";
       index = 0;
-    }, 800);
+    }, 1000);
 
     setTimeout(() => {
-      track.style.transition = "transform 0.8s ease";
-    }, 850);
+      track.style.transition = "transform 1s cubic-bezier(0.22,1,0.36,1)";
+    }, 1050);
   }
+
+  if (index < 0) index = 0;
 }
 
-// auto slide every 3 seconds
-function startAutoSlide() {
-  autoSlide = setInterval(slideProjects, 3000);
+// arrows
+rightBtn.addEventListener('click', () => moveSlide(1));
+leftBtn.addEventListener('click', () => moveSlide(-1));
+
+// auto slide (slow + premium)
+function startAuto() {
+  autoSlide = setInterval(() => moveSlide(1), 3500);
 }
 
-function stopAutoSlide() {
+function stopAuto() {
   clearInterval(autoSlide);
 }
 
-// start
-startAutoSlide();
+// pause on hover
+track.addEventListener('mouseenter', stopAuto);
+track.addEventListener('mouseleave', startAuto);
 
-// stop on hover
-track.addEventListener('mouseenter', stopAutoSlide);
-track.addEventListener('mouseleave', startAutoSlide);
-
-// swipe support (mobile)
-let startX = 0;
-
-track.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-track.addEventListener('touchend', (e) => {
-  let endX = e.changedTouches[0].clientX;
-
-  if (startX - endX > 50) slideProjects();
-  if (endX - startX > 50) index = Math.max(index - 1, 0);
-});
+startAuto();
