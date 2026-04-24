@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-});
+
 const track = document.querySelector('.projects-track');
 const cards = document.querySelectorAll('.project-card');
 const leftBtn = document.querySelector('.arrow.left');
@@ -176,17 +176,19 @@ cards.forEach(card => {
 });
 
 const total = document.querySelectorAll('.project-card').length;
+updateCenter();  // ✅ VERY IMPORTANT (initial center)
 
 function moveSlide(dir = 1) {
   index += dir;
   track.style.transform = `translateX(-${index * (100 / 3)}%)`;
-
+updateCenter();
   // reset smoothly (no visible jump)
   if (index >= total / 2) {
     setTimeout(() => {
       track.style.transition = "none";
       track.style.transform = "translateX(0)";
       index = 0;
+       updateCenter();  
     }, 1000);
 
     setTimeout(() => {
@@ -215,3 +217,14 @@ track.addEventListener('mouseenter', stopAuto);
 track.addEventListener('mouseleave', startAuto);
 
 startAuto();
+function updateCenter() {
+  const cards = document.querySelectorAll('.project-card');
+
+  cards.forEach(card => card.classList.remove('active-center'));
+
+  const centerIndex = index + 1; // middle of 3 visible
+  if (cards[centerIndex]) {
+    cards[centerIndex].classList.add('active-center');
+  }
+}
+   });
