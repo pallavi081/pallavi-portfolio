@@ -755,6 +755,30 @@ section {
 .projects-track {
   transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
+.section-sub {
+  color: #d4af37;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+/* default state */
+.project-card {
+  opacity: 0.6;
+  transform: scale(0.92);
+  transition: all 0.6s ease;
+}
+
+/* center highlight */
+.project-card.active-center {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
 /* ==========================================================================
   Achievements Section (Timeline)
 ========================================================================== */
